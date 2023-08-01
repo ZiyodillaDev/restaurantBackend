@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.2",
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.0.1",
+    "express-async-errors": "^3.1.1",
+    "mongoose": "^7.3.4",
+    "bcrypt": "^5.1.0"
+  },
+  "type": "module",
+  "name": "restaurant",
+  "version": "1.0.0",
+  "main": "dist/src/app.js",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.4.2",
+    "nodemon": "^3.0.1"
+  },
+  "scripts": {
+    "dev": "tsc && nodemon dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
