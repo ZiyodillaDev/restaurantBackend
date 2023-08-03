@@ -7,6 +7,7 @@ import { router as deliveryRouter } from "./deleivery.routes.js";
 import { router as orderRouter } from "./order.routes.js";
 import { router as deliveryRequestsRouter } from "./deliveryRequest.routes.js";
 import { router as usersRouter } from "./user.routes.js";
+import { router as ratingRouter } from "./rating.routes.js";
 
 const router = express.Router();
 router.use('/auth', authRouter);
@@ -17,6 +18,7 @@ router.use('/', deliveryRouter);
 router.use('/', orderRouter);
 router.use('/', deliveryRequestsRouter);
 router.use('/', usersRouter);
+router.use('/', ratingRouter);
 
 
 export default router;
