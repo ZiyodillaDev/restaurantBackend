@@ -1,7 +1,7 @@
 import { NextFunction, Request, RequestHandler, Response } from "express";
 import jwt from "jsonwebtoken";
-import config from "../../config/config.js";
-import { CustomError } from "../utils/custom-error.js";
+import config from "../../../config/config.js";
+import { CustomError } from "../../utils/custom-error.js";
 
 interface AuthRequest extends Request {
   user?: any;

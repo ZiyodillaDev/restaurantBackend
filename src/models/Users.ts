@@ -1,25 +1,36 @@
-import {Schema, model} from "mongoose";
+import { Schema, model } from "mongoose";
+import { IAuthUser } from "../interface/auth.interface.js";
 
-const schema = new Schema(
-  {
-    username: {
-      type: String,
-      required: true,
-    },
-    password: {
-      type: String,
-      required: true,
-    },
-    isVerified: {
-      type: Boolean,
-      default: false,
-    },
-    isActive: {
-      type: Boolean,
-      default: true,
-    },
+const UserSchema = new Schema<IAuthUser>({
+  username: {
+    type: String,
+    required: true,
   },
-  {timestamps: true}
-);
+  fullname: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  phone: {
+    type: String,
+    required: true,
+  },
+  balance: {
+    type: Number,
+    default: 0
+  },
+  image: {
+    type: String,
+  }
+}, { timestamps: true });
 
-export default model("User", schema);
+const Users = model<IAuthUser>("User", UserSchema);
+
+export default Users;

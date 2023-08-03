@@ -1,4 +1,4 @@
-import express from "express"; //  npm i @types/express -D
+import express from "express"; 
 const app = express();
 
 import modules from "./start/modules.js";
