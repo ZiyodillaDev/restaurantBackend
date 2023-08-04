@@ -1,7 +1,7 @@
 import mongoose, { Document, Types } from "mongoose";
 
 export interface IAuth extends Document {
-    username: string;
+    email: string;
     password: string;
 }
 

@@ -11,7 +11,7 @@ const run = async (app: Application) => {
     const admin = await Admins.findOne();
     if (!admin)
       Admins.create({
-        username: "admin",
+        username: "admin@gmail.com",
         password: "$2a$10$4GFd8yGZjTjwiazICt3Us.UyvZwKEn9cyoN63ZJSkShYMMzGjxhr6",
       });
   } else {

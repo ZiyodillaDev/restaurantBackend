@@ -18,11 +18,11 @@ class AuthController {
     res: Response,
     next: NextFunction
   ): Promise<void> {
-    const { username, password }: IAuth = req.body;
+    const { email, password }: IAuth = req.body;
     try {
-      const admin = await Admins.findOne({ username });
+      const admin = await Admins.findOne({ email });
       if (!admin) {
-        res.status(403).json({ message: "Invalid username or password" });
+        res.status(403).json({ message: "Invalid email or password" });
       }
 
       const compare = await bcrypt.compare(password, admin!.password);

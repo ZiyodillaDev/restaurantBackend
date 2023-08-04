@@ -2,7 +2,7 @@ import { Schema, model } from "mongoose";
 import { IAuth } from "../interface/auth.interface.js";
 
 const AdminSchema = new Schema<IAuth>({
-    username: {
+    email: {
         type: String,
         required: true,
     },
